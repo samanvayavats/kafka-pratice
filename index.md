@@ -17,3 +17,14 @@ Format Kafka storage:
 ```bat
 .\bin\windows\kafka-storage.bat format --standalone -t <random-uuid> -c .\config\server.properties
 ```
+
+Start the kafka server 
+```bat
+.\bin\windows\kafka-server-start.bat .\config\server.properties
+```
+
+Create the topic 
+```bat
+.\bin\windows\kafka-topics.bat --create --bootstrap-server localhost:9092 --topic my-group-topic --partitions 3 --replication-factor 1
+
+```
