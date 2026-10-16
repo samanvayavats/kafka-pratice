@@ -42,7 +42,7 @@ List all available Apache Kafka topics:
 .\bin\windows\kafka-topics.bat --list --bootstrap-server localhost:9092
 ```
 
-Creating the consumer for the comsumer group:
+Creating the consumer for the consumer group:
 
 ```bat
 .\bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic my-group-topic --group my-first-group
@@ -58,4 +58,10 @@ Producer with key:
 
 ```bat
 .\bin\windows\kafka-console-producer.bat --bootstrap-server localhost:9092 --topic my-group-topic --property "parse.key=true" --property "key.separator=:"
+```
+
+Number of consumers:
+
+```bat
+.\bin\windows\kafka-consumer-groups.bat --bootstrap-server localhost:9092 --describe --group my-first-group
 ```
